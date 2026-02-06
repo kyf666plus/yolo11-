@@ -1,0 +1,218 @@
+[
+  {
+    "model_name": "三脚架检测器",
+    "total_test_images": 26,
+    "total_gt_boxes": 26,
+    "total_pred_boxes": 28,
+    "true_positives": 26,
+    "false_positives": 2,
+    "false_negatives": 0,
+    "precision": 0.9285714285714286,
+    "recall": 1.0,
+    "f1_score": 0.962962962962963,
+    "average_precision": 0.9999999999999998,
+    "conf_threshold": 0.25,
+    "iou_threshold": 0.5,
+    "details": [
+      {
+        "image": "1f828362-37.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "20fb0f76-60.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "2bb2ceb4-65.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "307c1ad3-55.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "3332fb7c-47.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "569a2362-52.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "59dbf3e0-45.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "6e82d204-9.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "7f262559-20.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "a1f4dcfb-22.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 2,
+        "matched": 1,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      }
+    ],
+    "details_note": "仅显示前10条，共26条"
+  },
+  {
+    "model_name": "安全防护栏检测器",
+    "total_test_images": 32,
+    "total_gt_boxes": 64,
+    "total_pred_boxes": 78,
+    "true_positives": 62,
+    "false_positives": 16,
+    "false_negatives": 2,
+    "precision": 0.7948717948717948,
+    "recall": 0.96875,
+    "f1_score": 0.8732394366197183,
+    "average_precision": 0.9901547625290851,
+    "conf_threshold": 0.25,
+    "iou_threshold": 0.5,
+    "details": [
+      {
+        "image": "0f0e3efe-15.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "3325a642-19.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 3,
+        "matched": 1,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      },
+      {
+        "image": "3791616a-38.jpg",
+        "gt_boxes": 2,
+        "pred_boxes": 2,
+        "matched": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "41979709-8.jpg",
+        "gt_boxes": 2,
+        "pred_boxes": 3,
+        "matched": 2,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "image": "53b918de-5.jpg",
+        "gt_boxes": 3,
+        "pred_boxes": 4,
+        "matched": 2,
+        "tp": 2,
+        "fp": 2,
+        "fn": 1
+      },
+      {
+        "image": "53ceb2be-16.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "7524801b-20.jpg",
+        "gt_boxes": 2,
+        "pred_boxes": 2,
+        "matched": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "948e2a22-26.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "989e5de8-41.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 2,
+        "matched": 1,
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "image": "a5673b40-39.jpg",
+        "gt_boxes": 1,
+        "pred_boxes": 1,
+        "matched": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    ],
+    "details_note": "仅显示前10条，共32条"
+  }
+]

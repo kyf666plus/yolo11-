@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多模型目标检测系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚨 多模型目标检测系统</h1>
+            <p>支持门状态、反光背心、安全带、防护面罩、警示标志检测</p>
+        </header>
+
+        <main>
+            <!-- 模型选择区域 -->
+            <div class="model-selector">
+                <h3>🎯 选择检测模型</h3>
+                <div id="modelButtons" class="model-buttons">
+                    <!-- 动态加载模型按钮 -->
+                    <div class="loading-models">
+                        <div class="spinner-small"></div>
+                        <span>加载模型中...</span>
+                    </div>
+                </div>
+                <div id="currentModelInfo" class="current-model-info">
+                    <p><strong>当前模型:</strong> <span id="currentModelName">加载中...</span></p>
+                    <p class="model-description" id="currentModelDesc">正在初始化...</p>
+                </div>
+            </div>
+
+            <!-- 上传区域 -->
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">📁</div>
+                        <p>点击选择图片或拖拽图片到此处</p>
+                        <p class="upload-hint">支持 JPG, PNG, JPEG, BMP 格式，最大 16MB</p>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
+            </div>
+
+            <!-- 图片预览和结果区域 -->
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="image-container">
+                    <div class="original-image">
+                        <h3>原始图片</h3>
+                        <img id="originalImage" src="" alt="原始图片">
+                    </div>
+                    <div class="detected-image">
+                        <h3>检测结果</h3>
+                        <img id="detectedImage" src="" alt="检测结果">
+                        <div class="loading" id="loading">
+                            <div class="spinner"></div>
+                            <p>AI正在检测中...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 检测统计 -->
+                <div class="detection-stats" id="detectionStats">
+                    <h3>📊 检测统计</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">使用模型:</span>
+                            <span class="stat-value" id="usedModel">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">检测到的目标:</span>
+                            <span class="stat-value" id="detectionCount">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">平均置信度:</span>
+                            <span class="stat-value" id="avgConfidence">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">处理时间:</span>
+                            <span class="stat-value" id="processTime">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">图片尺寸:</span>
+                            <span class="stat-value" id="imageSize">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 详细检测结果 -->
+                <div class="detection-details" id="detectionDetails">
+                    <h3>🎯 详细检测结果</h3>
+                    <div class="details-table">
+                        <table id="detectionTable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>类别</th>
+                                    <th>置信度</th>
+                                    <th>位置 (x, y, w, h)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="detectionTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="downloadResult()">📥 下载结果图片</button>
+                    <button class="btn btn-secondary" onclick="resetDetection()">🔄 重新检测</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- 历史记录 -->
+        <div class="history-section">
+            <div class="history-header">
+                <h3>📋 检测历史</h3>
+                <div class="history-filter">
+                    <label>筛选模型:</label>
+                    <select id="historyFilter" onchange="filterHistory()">
+                        <option value="all">全部</option>
+                    </select>
+                </div>
+            </div>
+            <div class="history-list" id="historyList">
+                <p class="no-history">暂无检测历史</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

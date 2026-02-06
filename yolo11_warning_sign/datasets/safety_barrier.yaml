@@ -1,0 +1,7 @@
+names:
+- 安全防护栏
+nc: 1
+path: D:\yolo11_warning_sign\datasets\safety_barrier_split
+test: test/images
+train: train/images
+val: val/images
